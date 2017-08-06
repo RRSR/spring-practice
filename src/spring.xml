@@ -4,11 +4,11 @@
 <beans>
   <bean class="Triangle" id="triangle">
     <property name="points">
-      <list>
-        <ref bean="pointZero"/>
-        <ref bean="pointOne"/>
-        <ref bean="pointOne"/>
-      </list>
+      <map>
+        <entry key="Point A" value-ref="pointZero"/>
+        <entry key="Point B" value-ref="pointOne"/>
+        <entry key="Point C" value-ref="pointTwo"/>
+      </map>
     </property>
   </bean>
 
