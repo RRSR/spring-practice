@@ -1,36 +1,38 @@
 public class Triangle {
 
-  private String type = "Scaline";
-  private int height =20;
+  private Point pointA;
+  private Point pointB;
+  private Point pointC;
 
-  public String getType() {
-    return type;
+  public void draw(){
+    System.out.println("The triangel is formed by the following 3 points");
+    System.out.println("Point A ( "+pointA.getX()+" , "+pointA.getY()+" )");
+    System.out.println("Point B ( "+pointB.getX()+" , "+pointB.getY()+" )");
+    System.out.println("Point C ( "+pointC.getX()+" , "+pointC.getY()+" )");
   }
 
-//  public void setType(String type) {
-//    this.type = type;
-//  }
-
-
-  public int getHeight() {
-    return height;
+  public Point getPointA() {
+    return pointA;
   }
 
-  public Triangle(int height) {
-    this.height = height;
+  public void setPointA(Point pointA) {
+    this.pointA = pointA;
   }
 
-  public Triangle(String type) {
-    this.type = type;
+  public Point getPointB() {
+    return pointB;
   }
 
-  public Triangle(String type, int height) {
-    this.type = type;
-    this.height = height;
+  public void setPointB(Point pointB) {
+    this.pointB = pointB;
   }
 
-  public  void draw(){
-    System.out.println("You have drawn a "+getType()+" Triangle of height "+getHeight()+".");
+  public Point getPointC() {
+    return pointC;
+  }
+
+  public void setPointC(Point pointC) {
+    this.pointC = pointC;
   }
 
 }

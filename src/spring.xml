@@ -2,11 +2,24 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 <beans>
   <bean id="triangle" class="Triangle">
-    <!--<property name="type" value="Equilateral"/>-->
-    <!--<constructor-arg type="java.lang.String" value="nice"/>-->
-    <!--<constructor-arg type="int" value="123"/>-->
-    <constructor-arg index="0" value="nice"/>
-    <constructor-arg index="1" value="123"/>
-
+    <property name="pointA" ref="pointZero"/>
+    <property name="pointB" ref="pointOne"/>
+    <property name="pointC" ref="pointTwo"/>
   </bean>
+
+  <bean id="pointZero" class="Point">
+    <property name="x" value="0"/>
+    <property name="y" value="0"/>
+  </bean>
+
+  <bean id="pointOne" class="Point">
+    <property name="x" value="10"/>
+    <property name="y" value="0"/>
+  </bean>
+
+  <bean id="pointTwo" class="Point">
+    <property name="x" value="0"/>
+    <property name="y" value="10"/>
+  </bean>
+
 </beans>
