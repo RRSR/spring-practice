@@ -7,7 +7,7 @@
       <list>
         <ref bean="pointZero"/>
         <ref bean="pointOne"/>
-        <ref bean="pointTwo"/>
+        <ref bean="pointOne"/>
       </list>
     </property>
   </bean>

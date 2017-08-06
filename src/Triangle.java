@@ -1,8 +1,9 @@
 import java.util.List;
+import java.util.Set;
 
 class Triangle {
 
-  private List<Point> points;
+  private Set<Point> points;
 
   public void draw() {
     System.out.println("The triangle is formed by the following 3 points");
@@ -11,11 +12,11 @@ class Triangle {
     }
   }
 
-  public List<Point> getPoints() {
+  public Set<Point> getPoints() {
     return points;
   }
 
-  public void setPoints(List<Point> points) {
+  public void setPoints(Set<Point> points) {
     this.points = points;
   }
 }
