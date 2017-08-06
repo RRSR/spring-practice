@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+  "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 <beans>
-  <bean id="triangle" class="Triangle">
-    <property name="pointA" ref="pointZero"/>
-    <property name="pointB">
-      <bean id="pointOne" class="Point">
-        <property name="x" value="10"/>
-        <property name="y" value="0"/>
-      </bean>
-    </property>
-    <property name="pointC">
-      <bean id="pointTwo" class="Point">
-        <property name="x" value="0"/>
-        <property name="y" value="10"/>
-      </bean>
+  <bean class="Triangle" id="triangle">
+    <property name="points">
+      <list>
+        <ref bean="pointZero"/>
+        <ref bean="pointOne"/>
+        <ref bean="pointTwo"/>
+      </list>
     </property>
   </bean>
 
-  <bean id="pointZero" class="Point">
+  <bean class="Point" id="pointZero">
     <property name="x" value="0"/>
     <property name="y" value="0"/>
   </bean>
 
-  <alias name="triangle" alias="triangle-name"/>
+  <bean class="Point" id="pointOne">
+    <property name="x" value="10"/>
+    <property name="y" value="0"/>
+  </bean>
+
+  <bean class="Point" id="pointTwo">
+    <property name="x" value="0"/>
+    <property name="y" value="10"/>
+  </bean>
+
 </beans>
