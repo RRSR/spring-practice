@@ -5,8 +5,8 @@
     <!--<property name="type" value="Equilateral"/>-->
     <!--<constructor-arg type="java.lang.String" value="nice"/>-->
     <!--<constructor-arg type="int" value="123"/>-->
-    <!--<constructor-arg index="0" value="nice"/>-->
-    <!--<constructor-arg index="1" value="123"/>-->
+    <constructor-arg index="0" value="nice"/>
+    <constructor-arg index="1" value="123"/>
 
   </bean>
 </beans>
