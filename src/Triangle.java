@@ -1,21 +1,37 @@
-import java.util.Map;
-import java.util.Map.Entry;
-
 class Triangle {
 
-  private Map<String,Point> points;
+  private Point pointA;
+  private Point pointC;
+  private Point pointB;
 
   public void draw() {
     System.out.println("The triangle is formed by the following 3 points : ");
-    for ( Entry temp : points.entrySet())
-      System.out.println(temp.getKey().toString()+" : ("+((Point)temp.getValue()).getX()+","+((Point)temp.getValue()).getY()+")");
+    System.out.println("Point A : ("+getPointA().getX()+","+getPointA().getY()+")");
+    System.out.println("Point B : ("+getPointB().getX()+","+getPointB().getY()+")");
+    System.out.println("Point C : ("+getPointC().getX()+","+getPointC().getY()+")");
   }
 
-  public Map<String, Point> getPoints() {
-    return points;
+  public Point getPointA() {
+    return pointA;
   }
 
-  public void setPoints(Map<String, Point> points) {
-    this.points = points;
+  public void setPointA(Point pointA) {
+    this.pointA = pointA;
+  }
+
+  public Point getPointC() {
+    return pointC;
+  }
+
+  public void setPointC(Point pointC) {
+    this.pointC = pointC;
+  }
+
+  public Point getPointB() {
+    return pointB;
+  }
+
+  public void setPointB(Point pointB) {
+    this.pointB = pointB;
   }
 }
