@@ -1,14 +1,8 @@
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanNameAware;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
-
-class Triangle implements ApplicationContextAware, BeanNameAware{
+class Triangle {
 
   private Point pointA;
   private Point pointC;
   private Point pointB;
-  private ApplicationContext context;
 
   public void draw() {
     System.out.println("The triangle is formed by the following 3 points : ");
@@ -41,13 +35,4 @@ class Triangle implements ApplicationContextAware, BeanNameAware{
     this.pointB = pointB;
   }
 
-  @Override
-  public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-    this.context = applicationContext;
-  }
-
-  @Override
-  public void setBeanName(String name) {
-    System.out.println("The Triangle class's bean name is : " + name);
-  }
 }
