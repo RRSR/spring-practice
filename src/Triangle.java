@@ -1,7 +1,4 @@
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
-
-class Triangle implements InitializingBean,DisposableBean{
+class Triangle{
 
   private Point pointA;
   private Point pointC;
@@ -38,21 +35,4 @@ class Triangle implements InitializingBean,DisposableBean{
     this.pointB = pointB;
   }
 
-  @Override
-  public void afterPropertiesSet() throws Exception {
-    System.out.println("TRIANGLE : InitializingBean afterPropertiesSet method is called.");
-  }
-
-  @Override
-  public void destroy() throws Exception {
-    System.out.println("TRIANGLE : DisposableBean destroy method is called.");
-  }
-
-  public void myInit(){
-    System.out.println("TRIANGLE : Calling the myInit() method.");
-  }
-
-  public void myDestroy(){
-    System.out.println("TRIANGLE : Calling the myDestroy() method.");
-  }
 }

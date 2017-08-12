@@ -2,7 +2,7 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
   "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
-<beans default-init-method="myInit" default-destroy-method="myDestroy">
+<beans>
   <bean class="Triangle" id="triangle">
     <property name="PointA" ref="pointZero"/>
     <property name="PointB" ref="pointOne"/>
@@ -23,4 +23,6 @@
     <property name="x" value="0"/>
     <property name="y" value="10"/>
   </bean>
+
+  <bean class="DisplayNameBeanPostProcessor"/>
 </beans>
