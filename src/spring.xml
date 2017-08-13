@@ -10,8 +10,8 @@
   </bean>
 
   <bean class="Point" id="pointZero">
-    <property name="x" value="0"/>
-    <property name="y" value="0"/>
+    <property name="x" value="${pointA.x}"/>
+    <property name="y" value="${pointB.y}"/>
   </bean>
 
   <bean class="Point" id="pointOne">
@@ -24,5 +24,10 @@
     <property name="y" value="10"/>
   </bean>
 
-  <bean class="DisplayNameBeanPostProcessor"/>
+  <!--<bean class="MyBeanFactoryPostProcessor"/>-->
+
+  <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <property name="locations" value="pointsConfig.properties"/>
+  </bean>
+  
 </beans>
