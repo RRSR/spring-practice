@@ -25,7 +25,8 @@
   </bean>
 
   <bean id="circle" class="Circle">
-    <property name="centre" ref="pointZero"/>
+    <!--<property name="centre" ref="pointZero"/>-->
   </bean>
 
+  <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
 </beans>
