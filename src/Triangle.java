@@ -1,4 +1,4 @@
-class Triangle{
+class Triangle implements Shape{
 
   private Point pointA;
   private Point pointC;
