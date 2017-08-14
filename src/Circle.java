@@ -1,4 +1,5 @@
-import org.springframework.beans.factory.annotation.Required;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Circle implements Shape{
 
@@ -8,7 +9,8 @@ public class Circle implements Shape{
     return centre;
   }
 
-  @Required
+  @Autowired
+  @Qualifier("relatedToCircle")
   public void setCentre(Point centre) {
     this.centre = centre;
   }
