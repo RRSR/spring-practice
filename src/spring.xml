@@ -9,28 +9,29 @@
 
   <context:annotation-config/>
 
-  <bean class="Triangle" id="triangle">
-    <property name="PointA" ref="pointZero"/>
-    <property name="PointB" ref="pointOne"/>
-    <property name="PointC" ref="pointTwo"/>
-  </bean>
+  <!--<bean class="Triangle" id="triangle">-->
+    <!--<property name="PointA" ref="pointZero"/>-->
+    <!--<property name="PointB" ref="pointOne"/>-->
+    <!--<property name="PointC" ref="pointTwo"/>-->
+  <!--</bean>-->
 
-  <bean class="Point" id="pointZero">
-    <qualifier value="relatedToCircle"/>
-    <property name="x" value="0"/>
-    <property name="y" value="0"/>
-  </bean>
+  <!--<bean class="Point" id="pointZero">-->
+    <!--<property name="x" value="0"/>-->
+    <!--<property name="y" value="0"/>-->
+  <!--</bean>-->
 
-  <bean class="Point" id="pointOne">
-    <property name="x" value="10"/>
-    <property name="y" value="0"/>
-  </bean>
+  <!--<bean class="Point" id="pointOne">-->
+    <!--<property name="x" value="10"/>-->
+    <!--<property name="y" value="0"/>-->
+  <!--</bean>-->
 
   <bean class="Point" id="pointTwo">
     <property name="x" value="0"/>
     <property name="y" value="10"/>
   </bean>
 
-  <bean id="circle" class="Circle"></bean>
+  <bean id="circle" class="Circle">
+    <!--<property name="centre" ref="centre"/>-->
+  </bean>
 
 </beans>
