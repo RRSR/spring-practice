@@ -1,3 +1,5 @@
+package raj;
+
 class Point{
 
   private int x;

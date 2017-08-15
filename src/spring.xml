@@ -9,29 +9,31 @@
 
   <context:annotation-config/>
 
-  <!--<bean class="Triangle" id="triangle">-->
+  <context:component-scan base-package="raj"/>
+
+  <!--<bean class="raj.Triangle" id="triangle">-->
     <!--<property name="PointA" ref="pointZero"/>-->
     <!--<property name="PointB" ref="pointOne"/>-->
     <!--<property name="PointC" ref="pointTwo"/>-->
   <!--</bean>-->
 
-  <!--<bean class="Point" id="pointZero">-->
+  <!--<bean class="raj.Point" id="pointZero">-->
     <!--<property name="x" value="0"/>-->
     <!--<property name="y" value="0"/>-->
   <!--</bean>-->
 
-  <!--<bean class="Point" id="pointOne">-->
+  <!--<bean class="raj.Point" id="pointOne">-->
     <!--<property name="x" value="10"/>-->
     <!--<property name="y" value="0"/>-->
   <!--</bean>-->
 
-  <bean class="Point" id="pointTwo">
+  <bean class="raj.Point" id="pointTwo">
     <property name="x" value="0"/>
     <property name="y" value="10"/>
   </bean>
 
-  <bean id="circle" class="Circle">
+  <!--<bean id="circle" class="raj.Circle">-->
     <!--<property name="centre" ref="centre"/>-->
-  </bean>
+  <!--</bean>-->
 
 </beans>
