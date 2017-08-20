@@ -11,29 +11,34 @@
 
   <context:component-scan base-package="raj"/>
 
-  <!--<bean class="raj.Triangle" id="triangle">-->
-    <!--<property name="PointA" ref="pointZero"/>-->
-    <!--<property name="PointB" ref="pointOne"/>-->
-    <!--<property name="PointC" ref="pointTwo"/>-->
-  <!--</bean>-->
+  <bean class="raj.Triangle" id="triangle" autowire="byName">
+    <property name="PointA" ref="pointZero"/>
+    <property name="PointB" ref="pointOne"/>
+    <property name="PointC" ref="pointTwo"/>
+  </bean>
 
-  <!--<bean class="raj.Point" id="pointZero">-->
-    <!--<property name="x" value="0"/>-->
-    <!--<property name="y" value="0"/>-->
-  <!--</bean>-->
+  <bean class="raj.Point" id="pointZero">
+    <property name="x" value="0"/>
+    <property name="y" value="0"/>
+  </bean>
 
-  <!--<bean class="raj.Point" id="pointOne">-->
-    <!--<property name="x" value="10"/>-->
-    <!--<property name="y" value="0"/>-->
-  <!--</bean>-->
+  <bean class="raj.Point" id="pointOne">
+    <property name="x" value="10"/>
+    <property name="y" value="0"/>
+  </bean>
 
   <bean class="raj.Point" id="pointTwo">
     <property name="x" value="0"/>
     <property name="y" value="10"/>
   </bean>
 
-  <!--<bean id="circle" class="raj.Circle">-->
-    <!--<property name="centre" ref="centre"/>-->
-  <!--</bean>-->
+  <bean id="circle" class="raj.Circle">
+    <property name="centre" ref="pointZero"/>
+  </bean>
+
+  <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+    <property name="basename" value="messages_en" />
+    <property name="useCodeAsDefaultMessage" value="true" />
+  </bean>
 
 </beans>

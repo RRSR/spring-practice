@@ -1,16 +1,23 @@
 package raj;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
+
 class Triangle implements Shape {
 
   private Point pointA;
-  private Point pointC;
   private Point pointB;
+  private Point pointC;
+
+  @Autowired
+  private MessageSource messageSource;
+
 
   public void draw() {
-    System.out.println("The triangle is formed by the following 3 points : ");
-    System.out.println("raj.Point A : ("+getPointA().getX()+","+getPointA().getY()+")");
-    System.out.println("raj.Point B : ("+getPointB().getX()+","+getPointB().getY()+")");
-    System.out.println("raj.Point C : ("+getPointC().getX()+","+getPointC().getY()+")");
+    System.out.println(messageSource.getMessage("triangle.message",null,"Default Triangle Draw", null));
+    System.out.println(messageSource.getMessage("point.message",new Object[]{pointA.getX(),pointA.getY()},"Default Point Draw",null));
+    System.out.println(messageSource.getMessage("point.message",new Object[]{pointB.getX(),pointB.getY()},"Default Point Draw",null));
+    System.out.println(messageSource.getMessage("point.message",new Object[]{pointC.getX(),pointC.getY()},"Default Point Draw",null));
   }
 
   public Point getPointA() {
@@ -37,4 +44,11 @@ class Triangle implements Shape {
     this.pointB = pointB;
   }
 
+  public MessageSource getMessageSource() {
+    return messageSource;
+  }
+
+  public void setMessageSource(MessageSource messageSource) {
+    this.messageSource = messageSource;
+  }
 }
